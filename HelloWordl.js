@@ -1,4 +1,4 @@
-// массивы
+//<->Массивы
 //#region 
 
 let mass = ['aa','sdf'];
@@ -13,7 +13,7 @@ let lenght = empty.length;
 
 //#endregion
 
-// переменные
+//<->Переменные
 //#region 
 let flag = true;
 
@@ -28,7 +28,108 @@ let str2 = 'hi';
 
 //#endregion
 
-// рандом
+//<->Объекты
+//#region
+
+//------------Syntacsis--------------
+//#region 
+let Alex = {
+    name:'Sasha',
+    age : 17,
+    work : 'Sales-manager'
+};
+
+Alex.IsMarried = true; // взмахом крыла мы добавили новое св-во
+delete Alex.age; // и так же легко удалили.
+
+let name = Alex.name; // просто присвоили в переменную значения из объекта
+
+let Swap = {}; // создание пустого объекта
+
+let Test = {
+    Date_ : {day: 28, month: 'March', year: 2023}
+}
+
+Test.Date_.day = 29; // Вот так создаются вложенные объекты. Считай класс в классе.
+
+//#endregion
+
+//------------Методы в объектах--------------
+//#region 
+{
+    let Alex = {
+        name : 'Alex',
+        age: function(){
+            return Math.random() * 56;
+        }, // так работают методы, логика естественно норрмальная
+
+        namePlusAge: function(){
+            return 'Name:' + this.name + toString(this.age); // через ключевое слово this мы можем обращаться к свойствам объекта
+        },
+
+        shortMethod(){
+            // укороченная версия метода
+        }
+        
+    }
+
+    // ДжаваСкриптеры называют функции внутри объектов - методами
+}
+//#endregion
+
+//------------Смешивание объектов-------------
+//#region 
+{
+    let fridge  = {
+        top: 'Banana',
+        bot: 'Apple'
+    };
+
+    let table = {
+        onTable:'Water'
+    };
+
+    let pepole = {
+        ...fridge,
+        ...table,
+    }
+
+    pepole.onTable = 'Я не знаю почему я придумал такие свойства, кажется я устал просто после работы малям\nСуть в том, что мы берем все свойства из объектов и мешаем в новый';
+}
+//#endregion
+
+//------------Перебор объектов-------------
+
+{
+    let Alex = {
+        name: "sasha",
+        age: 18,
+        isMarried: true,
+    };
+
+    let values = Object.values(Alex);
+
+    for (const value of values) {
+        console.log(key); // все значения в свойствах объекта
+    }
+
+    let keys = Object.keys(Alex);
+
+    for (const keys of object) {
+        console.log(keys); // все ключи в объекте
+    }
+
+    let entires = Object.entries();
+
+    for (const [key,value] of entires) {
+        
+        console.log(`Key: ${key}, Value: ${value}`) // Очень читаемо и классно
+    };
+}
+
+//#endregion
+
+//<->Рандом
 //#region 
 
 let random = Math.random();
@@ -43,7 +144,7 @@ while (Math.random() > 0.3) {
 
 //#endregion
 
-// тернарный оператор
+//<->Тернарный оператор
 //#region 
 
 let tern = 1;
@@ -58,7 +159,7 @@ console.log(tern > 10 ? 'Да' : 'Нет');
 
 //#endregion
 
-//функции
+//<->Функции
 //#region 
 
 //------------Syntacsis--------------
@@ -119,7 +220,7 @@ function ReturnFunction(x){
 
 //#endregion
 
-// функции полезные
+//<->Функции полезные
 //#region 
 
 let str_
@@ -128,10 +229,22 @@ parseInt(str_) // парсим строку в инт
 Number.isNaN(str_) // Проверит на NaN
 Number.isFinite(str_) // Вернет true если поместили число 
 
+Object.keys(Alex); // получить все названия свойств объекта в массив 
+Object.values(Alex); // получить все значения свойств объекта в массив 
+Object.entries(Alex); // получить и то, и то вместе в массив
+
+let a = {
+    a: 1,
+    b: 2,
+}
+
+let clone = Object.assign({}, a); // копирует все свойства в объект clone
+
 //#endregion
 
-// циклы
+//<->Циклы
 //#region 
+
 
 for (let i = 0; i < array.length; i++) {
     const element = array[i];
@@ -161,4 +274,21 @@ do {
 
 // continue and breake the same what  in C#
 
+//#endregion
+
+// <-> TypeOf
+
+//#region 
+
+console.log('TypeOf возвращяет тип объекта строкой');
+
+{ 
+    let x = 1;
+
+    typeof x; // number
+
+    typeof null; // object - исторически неверная тема, не проверяй на null через typeof
+
+    // и так далее
+}
 //#endregion
