@@ -29,8 +29,6 @@ let str2 = 'hi';
 //#endregion
 
 //<->Объекты
-//#region
-
 //------------Syntacsis--------------
 //#region 
 let Alex = {
@@ -52,7 +50,7 @@ let Test = {
 
 Test.Date_.day = 29; // Вот так создаются вложенные объекты. Считай класс в классе.
 
-//#endregion
+
 
 //------------Методы в объектах--------------
 //#region 
@@ -110,7 +108,7 @@ Test.Date_.day = 29; // Вот так создаются вложенные об
     let values = Object.values(Alex);
 
     for (const value of values) {
-        console.log(key); // все значения в свойствах объекта
+        console.log(value); // все значения в свойствах объекта
     }
 
     let keys = Object.keys(Alex);
@@ -126,6 +124,8 @@ Test.Date_.day = 29; // Вот так создаются вложенные об
         console.log(`Key: ${key}, Value: ${value}`) // Очень читаемо и классно
     };
 }
+
+//#endregion
 
 //#endregion
 
@@ -276,8 +276,33 @@ do {
 
 //#endregion
 
-// <-> TypeOf
+// <-> DOM
+//#region 
 
+{
+    let domIs = 'Document Object Model'
+
+    let methodsForWorkWothDom = {
+        Append : 'Добавляет элемент в конец',
+        Prepend : 'Добавляет элемент в начало',
+
+    };
+
+    let object = 'Главным объектом в дом является объект document';
+    let $ = 'Можно работать через $, знак бакса пишется внутри HTML';
+
+    let document_CreateElement = 'Создает HTML объекты, но только создает, не помещает на саму страницу';
+
+    let H1 = 'document.CreateElement($"H1")';    
+    
+    
+}
+
+//#endregion
+
+let b = `${5 + 5}`
+
+// <-> TypeOf
 //#region 
 
 console.log('TypeOf возвращяет тип объекта строкой');
