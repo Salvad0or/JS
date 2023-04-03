@@ -1,15 +1,18 @@
 
 
-document.addEventListener('DOMContentLoaded', function(){
-    let input = document.querySelector('.input_color');
-    let button = document.querySelector('.butClas');
-    let div = document.querySelector('.divv');
+let input = document.querySelector('.input_color');
+let button = document.querySelector('.butClas');
+let div = document.querySelector('.divv');
 
-    function func(){
-        div.style.backgroundColor = 'black';
-    }
+function func(){
+    div.style.backgroundColor = 'black';
+    button.style.color = 'red'
 
-    button.addEventListener('click',func);
+    button.style
+};
 
-});
+button.addEventListener('click',func);
+   
+
+
 
