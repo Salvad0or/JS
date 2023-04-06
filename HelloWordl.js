@@ -240,6 +240,8 @@ let a = {
 
 let clone = Object.assign({}, a); // копирует все свойства в объект clone
 
+confirm() // Вызывается в браузере и возвращяет true или false
+
 //#endregion
 
 //<->Циклы
@@ -299,8 +301,6 @@ do {
 }
 
 //#endregion
-
-let b = `${5 + 5}`
 
 // <-> TypeOf
 //#region 
